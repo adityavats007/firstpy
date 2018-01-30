@@ -5,9 +5,13 @@
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#basics" aria-controls="basics" role="tab" data-toggle="tab">Basics</a></li>
-    <li role="presentation"><a href="#wdev" aria-controls="wdev" role="tab" data-toggle="tab">Webdev</a></li>
-    <li role="presentation"><a href="#dan" aria-controls="dan" role="tab" data-toggle="tab">Data Analysis</a></li>
+    <li role="presentation" class="active"><a href="#basics" aria-controls="basics" role="tab" data-toggle="tab">Elementary Education</a></li>
+    <li role="presentation"><a href="#flask" aria-controls="flask" role="tab" data-toggle="tab">Secondary Education</a></li>
+    <li role="presentation"><a href="#django" aria-controls="django" role="tab" data-toggle="tab">Higher Education</a></li>
+	  <li role="presentation"><a href="#mysql" aria-controls="mysql" role="tab" data-toggle="tab">Technical Education</a></li>
+		  <li role="presentation"><a href="#sqlite" aria-controls="sqlite" role="tab" data-toggle="tab">Adult Education</a></li>
+			 <li role="presentation"><a href="#dam" aria-controls="dam" role="tab" data-toggle="tab">Teacher Education</a></li>
+				
   </ul>
 
   <!-- Tab panes -->
@@ -15,20 +19,71 @@
   <div role="tabpanel" class="tab-pane fade in active" id="basics">
   <ul>
   
-  {% for t in TOPIC_DICT["Basics"] %} 
+  {% for t in TOPIC_DICT["Elementary Education"] %} 
   <li>
   <a href="{{t[1]}}">{{t[0]}}</a>
+  <p>   </p>
+   <p>   </p>
+  
   </li>
   {% endfor %} 
   
   </ul>
-  
-  
-  
-  
+ 
   </div>
-  <div role="tabpanel" class="tab-pane fade" id="wdev">profile is here</div>
-  <div role="tabpanel" class="tab-pane fade" id="dan">messages are here</div>
+  <div role="tabpanel" class="tab-pane fade" id="flask">
+   <ul>
+  
+  {% for t in TOPIC_DICT["Secondary Education"] %} 
+  <li>
+  <a href="{{t[1]}}">{{t[0]}}</a>
+    <p>   </p>  <p>   </p>
+  </li>
+  {% endfor %} 
+  
+  </ul>
+  </div>
+  <div role="tabpanel" class="tab-pane fade" id="django"> <ul>
+  
+  {% for t in TOPIC_DICT["Higher Education"] %} 
+  <li>
+  <a href="{{t[1]}}">{{t[0]}}</a>
+    <p>   </p>  <p>   </p>
+  </li>
+  {% endfor %} 
+  
+  </ul></div>
+   <div role="tabpanel" class="tab-pane fade" id="mysql"> <ul>
+  
+  {% for t in TOPIC_DICT["Technical Education"] %} 
+  <li>
+  <a href="{{t[1]}}">{{t[0]}}</a>
+    <p>   </p>  <p>   </p>
+  </li>
+  {% endfor %} 
+  
+  </ul></div>
+    <div role="tabpanel" class="tab-pane fade" id="sqlite"> <ul>
+  
+  {% for t in TOPIC_DICT["Adult Education"] %} 
+  <li>
+  <a href="{{t[1]}}">{{t[0]}}</a>
+    <p>   </p>  <p>   </p>
+  </li>
+  {% endfor %} 
+  
+  </ul></div>
+	 <div role="tabpanel" class="tab-pane fade" id="dam"> <ul>
+  
+  {% for t in TOPIC_DICT["Teacher Education"] %} 
+  <li>
+  <a href="{{t[1]}}">{{t[0]}}</a>
+    <p>   </p>  <p>   </p>
+  </li>
+  {% endfor %} 
+  
+  </ul></div>
+	
 </div>
 
 </div>

@@ -20,13 +20,18 @@
  
 		  <div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
 			<h5>
-
+             {% if session.logged_in %}
+				<a href="/support-donate/"> <span class="glyphicon glyphicon-heart"></span> Support   </a>
+				<a href="/logout/"><span class="glyphicon glyphicon-log-out"></span> Logout   </a>
+				{% else %}
 			<a href="/support-donate/"> <span class="glyphicon glyphicon-heart"></span> Support  &nbsp &nbsp</a>
 			
 	
 			<a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login &nbsp &nbsp  </a>
 
-		<a  href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up</a><h5>
+		<a  href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up</a>
+		{% endif %}
+		<h5>
 
       </ul>
         
@@ -38,7 +43,16 @@
 <!-- -->
 <div class="border-row" style="width:100% ; margin-bottom:15px;"></div>
 <div class="container-fluid" style="min-height:100%">
-
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert alert-warning aalert-dismissible" role="alert">
+    {% for message in messages %}
+      {{ message }}
+	  </div>
+    {% endfor %}
+    
+  {% endif %}
+{% endwith %}
 {% block body%} {%endblock%}
 
 </div>
